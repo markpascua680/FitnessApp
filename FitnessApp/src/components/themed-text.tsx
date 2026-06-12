@@ -1,4 +1,4 @@
-import { Platform, StyleSheet, Text, type TextProps } from 'react-native';
+import { Platform, StyleSheet, Text, TextInput, type TextProps, type TextInputProps } from 'react-native';
 
 import { Fonts, ThemeColor } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
@@ -23,6 +23,21 @@ export function ThemedText({ style, type = 'default', themeColor, ...rest }: The
         type === 'link' && styles.link,
         type === 'linkPrimary' && styles.linkPrimary,
         type === 'code' && styles.code,
+        style,
+      ]}
+      {...rest}
+    />
+  );
+}
+
+export function ThemedTextInput({ style, themeColor, ...rest }: TextInputProps & { themeColor?: ThemeColor }) {
+  const theme = useTheme();
+
+  return (
+    <TextInput
+      style={[
+        { color: theme[themeColor ?? 'text'] },
+        styles.default,
         style,
       ]}
       {...rest}

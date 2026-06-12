@@ -21,6 +21,7 @@ export const Colors = {
     backgroundElement: '#212225',
     backgroundSelected: '#2E3135',
     textSecondary: '#B0B4BA',
+    placeholder: '#ffffff',
   },
 } as const;
 
