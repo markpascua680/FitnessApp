@@ -25,6 +25,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     flexDirection: 'row',
+    margin: Spacing.six
   },
   heroSection: {
     alignItems: 'center',
@@ -32,6 +33,11 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: Spacing.four,
     gap: Spacing.four,
+  },
+  hyperlink: {
+    color: '#00ccff',
+    fontSize: 16,
+    fontWeight: '600',
   },
   input: {
     borderWidth: 1,
