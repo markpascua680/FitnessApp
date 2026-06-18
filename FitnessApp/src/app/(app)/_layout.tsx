@@ -1,23 +1,11 @@
-import AppTabs from "@/components/tabs/app-tabs";
-import { getCurrentUser } from "@/api/auth";
-import { useEffect } from "react";
-import { router } from "expo-router";
+import { styles } from '@/css/styles';
+import { View } from "react-native";
+import Index from '.';
 
-export default function Layout() {
-
-useEffect(() => {
-  async function checkAuth() {
-    const user = await getCurrentUser();
-    console.log('Current user:', user);
-    if (!user) {
-      router.replace('/login');
-    }
-  }
-  
-  checkAuth();
-}, []);
-
+export default function AppLayout() {
   return (
-    <AppTabs/>
+    <View style={styles.mainContainer}>
+      <Index />
+    </View>
   );
 }
