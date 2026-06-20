@@ -14,12 +14,11 @@ export const styles = StyleSheet.create({
   heroSection: {
     alignItems: 'center',
     justifyContent: 'center',
-    flex: 1,
     paddingHorizontal: Spacing.four,
     gap: Spacing.four,
   },
   layoutHeader: {
-    backgroundColor: darkTheme.backgroundPrimary,
+    backgroundColor: darkTheme.primary,
   },
   safeArea: {
     flex: 1,
@@ -29,6 +28,35 @@ export const styles = StyleSheet.create({
     paddingBottom: BottomTabInset + Spacing.three,
     maxWidth: MaxContentWidth,
   },
+  verticallySpaced: {
+    paddingTop: 4,
+    paddingBottom: 4,
+    alignSelf: 'stretch',
+  },
+
+  // Card styles
+  card: {
+    alignSelf: 'stretch',
+    borderColor: darkTheme.tertiary,
+    borderWidth: 4,
+    borderRadius: Spacing.four,
+    backgroundColor: darkTheme.primary,
+    padding: Spacing.six,
+  },
+
+  // Container styles
+  container: {
+    flex: 1,
+    backgroundColor: darkTheme.secondary,
+    padding: Spacing.four,
+  },
+  formContainer: {
+    gap: Spacing.three,
+  },
+  mainContainer: {
+    flex: 1,
+    backgroundColor: darkTheme.primary,
+  },
   stepContainer: {
     gap: Spacing.three,
     alignSelf: 'stretch',
@@ -36,23 +64,8 @@ export const styles = StyleSheet.create({
     paddingVertical: Spacing.four,
     borderRadius: Spacing.four,
   },
-  verticallySpaced: {
-    paddingTop: 4,
-    paddingBottom: 4,
-    alignSelf: 'stretch',
-  },
-
-  // Container styles
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    backgroundColor: darkTheme.backgroundPrimary,
-    margin: Spacing.four
-  },
-  mainContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    backgroundColor: darkTheme.backgroundSecondary,
+  scrollContent: {
+    flexGrow: 1,
   },
 
   // Button styles
@@ -82,21 +95,27 @@ export const styles = StyleSheet.create({
     fontSize: 16,
   },
   title: {
+    color: darkTheme.text,
     textAlign: 'center',
+    fontSize: 48,
   },
 
   // Form styles
   input: {
     borderWidth: 1,
-    borderColor: '#86939e',
+    borderColor: darkTheme.tertiary,
     borderRadius: 4,
+    color: darkTheme.text,
     padding: 12,
     fontSize: 16,
+  },
+  inputFocused: {
+    borderColor: darkTheme.accent,
   },
   label: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#86939e',
+    color: darkTheme.text,
     marginBottom: 6,
   },
 });
