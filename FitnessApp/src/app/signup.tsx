@@ -6,7 +6,7 @@ import { SubmitButton, TextFieldInput } from "@/components/formElements";
 export default function Signup() {
   return (
   <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
-        <View style={styles.card}>
+        <View style={[styles.card, styles.centered]}>
             <View style={styles.heroSection}>
                 <Text style={styles.title}>Sign Up</Text>
             </View>
