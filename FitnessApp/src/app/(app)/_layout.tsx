@@ -4,7 +4,7 @@ import Index from '.';
 
 export default function AppLayout() {
   return (
-    <View style={styles.mainContainer}>
+    <View style={styles.container}>
       <Index />
     </View>
   );

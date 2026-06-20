@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { BottomTabInset, MaxContentWidth, Spacing } from './constants/theme';
+import { BottomTabInset, MaxContentWidth, Spacing, Sizing } from './constants/theme';
 import { Colors } from './constants/theme';
 
 const darkTheme = Colors.dark;
@@ -11,10 +11,14 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 20,
   },
+  centered: {
+    alignSelf: 'center',
+    justifyContent: 'center',
+  },
   heroSection: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: Spacing.four,
+    padding: Spacing.four,
     gap: Spacing.four,
   },
   layoutHeader: {
@@ -22,15 +26,14 @@ export const styles = StyleSheet.create({
   },
   safeArea: {
     flex: 1,
-    paddingHorizontal: Spacing.four,
+    padding: Spacing.four,
     alignItems: 'center',
     gap: Spacing.three,
     paddingBottom: BottomTabInset + Spacing.three,
     maxWidth: MaxContentWidth,
   },
   verticallySpaced: {
-    paddingTop: 4,
-    paddingBottom: 4,
+    paddingVertical: 4,
     alignSelf: 'stretch',
   },
 
@@ -42,6 +45,7 @@ export const styles = StyleSheet.create({
     borderRadius: Spacing.four,
     backgroundColor: darkTheme.primary,
     padding: Spacing.six,
+    width: Sizing.medium,
   },
 
   // Container styles
